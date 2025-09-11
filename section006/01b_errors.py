@@ -1,3 +1,5 @@
+# 01b - Errors
+
 # first_name = 'Randy" # syntax errors
 # x + 1 = 1
 
