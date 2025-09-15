@@ -27,3 +27,29 @@ elif mark >= 50.0:
 else:
     print('F')
 
+# coding exercise 02a.1
+a = int(input('Enter A:'))
+b = int(input('Enter B:'))
+if ((a % 2) == 0):
+    if ((b % 2) == 0):
+        print('Both numbers are even.')
+
+if ((a % 2) == 0) and (b % 2) == 0:
+    print('Both numbers are even.')
+
+# coding exercise 02a.2
+n = 211
+if abs(100 - n) <= 10:
+    print(True)
+elif abs(200 - n) <= 10:
+    print(True)
+else:
+    print(False)
+
+# coding exercise 02a.3
+health_points = 3
+if health_points <= 0:
+    is_dead = True 
+else:
+    is_dead = False 
+    
