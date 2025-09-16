@@ -37,3 +37,30 @@ for n in range(0, 2000):
 
 print(f'{estimate = }')
 print(f'{math.exp(1) = }')
+
+# coding exercise 02b.2 (hard mode)
+x = 11
+estimate = x/2
+epsilon = 0.00001
+while abs(estimate ** 2 - x) > epsilon:
+    adjustment = abs(estimate ** 2 - x) / 4
+    if (estimate ** 2 - x) < 0:
+        # our estimate is too big
+        estimate += adjustment
+    else:
+        # our estimate is too small
+        estimate -= adjustment
+print(f'{estimate = }')
+print(f'{math.sqrt(x) = }')
+
+# optional homework problem
+max = 1000
+total = 0
+for i in range(1, max):
+    if (i % 3) == 0 or (i % 5) == 0:
+        # print(f'{i = }')
+        total += i 
+print(f'The sum of multiples of 3 & 5: {total}')
+
+# for i in range(100000000000):
+#     pass 
