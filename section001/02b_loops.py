@@ -24,10 +24,28 @@ import math
 # from math import factorial
 x = 1
 estimate = 0.0
-for n in range(0, 25000000):
+for n in range(0, 25):
     top = x ** n 
     bottom = math.factorial(n)
     estimate = estimate + top / bottom 
 
 print(f"estimate of euler's function: {estimate}")
+
+# coding exercise 02b.2
+x = 13.0
+epsilon = 0.0000001
+estimate = x / 2
+while abs(estimate ** 2 - x) > epsilon:
+    # how much to change?
+    change = abs(estimate ** 2 - x) / 8
+
+    # should we add or subtract?
+    if (estimate ** 2 - x) < 0:
+        estimate += change 
+    elif (estimate ** 2 - x) > 0:
+        estimate -= change 
+    
+    print(f'{estimate=}')
+print(f'estimate for sqrt({x}) = {estimate}')
+print(f'actual sqrt = {math.sqrt(x)}')
 
