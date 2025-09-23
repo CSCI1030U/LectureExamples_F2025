@@ -66,3 +66,32 @@ for mark in marks:
     total += mark 
 # 2. divide by the number of marks
 print(f'{total / len(marks) = }')
+
+
+# coding exercise 03a.2
+sentence = 'ahmed runs quickly'
+
+# 1. split up the string into words
+# 2. reverse the order of the word list
+words = []
+current_word = ''
+for letter in sentence:
+    if letter != ' ':
+        current_word += letter 
+    else:
+        words.insert(0, current_word)
+        current_word = ''
+words.insert(0, current_word)
+# print(f'{words = }')
+
+# 3. combine the reverse words back into a single string
+reverse_sentence = ''
+for word in words:
+    reverse_sentence += word + ' '
+print(f'{reverse_sentence = }')
+
+# pythonic solution
+words = sentence.split(' ')
+reverse_words = words[::-1]
+reverse_sentence = ' '.join(reverse_words)
+print(f'{reverse_sentence = }')
