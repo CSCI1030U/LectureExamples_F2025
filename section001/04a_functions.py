@@ -32,3 +32,25 @@ def say_ciao():
 say_ciao()
 say_ciao()
 print(f'{call_count = }')
+
+print('val1', 'val2', sep=',', end='\n\n')
+
+def calculate_interest(principal=1000, interest_rate=0.035):
+    return principal * interest_rate
+
+print(f'{calculate_interest() = }')
+print(f'{calculate_interest(principal=2500) = }')
+print(f'{calculate_interest(interest_rate=0.045) = }')
+print(f'{calculate_interest(principal=2500, interest_rate=0.045) = }')
+
+# coding exercise 04a.1
+def get_class_average(marks: list[float]) -> float:
+    total: float = 0.0
+    count: int = 0
+    for mark in marks:
+        total += mark
+        count += 1
+    return total / count 
+
+print(f'{get_class_average([57.0, 62.5, 68.0, 74.0, 55.0, 71.0, 94.5, 47.5]) = }')
+
