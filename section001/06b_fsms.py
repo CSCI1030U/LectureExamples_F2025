@@ -1,4 +1,4 @@
-# Finite State Machines/Automata
+# Finite State Machines/Automata (FSM/FSA)
 
 current_state = 'Start'
 user_action = 'insert $1 coin'
@@ -19,6 +19,6 @@ elif current_state == '$2':
     if user_action == 'insert $1 coin':
         current_state = '$3'
         open_gate = True
-    elif user_action == 'insert $2 coin':
+elif user_action == 'insert $2 coin':
         current_state = '$3'
         open_gate = True
