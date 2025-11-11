@@ -29,3 +29,24 @@ if phone_num_result:
     print(f'{phone_num_result.end() = }')
     print(f'{phone_num_result.group() = }')
 
+price_fsm = re.compile('(\$\d+(\.\d\d)?)')
+amazon_review = '''
+I bought this product for $109.99, but then I found it elsewhere
+for $100 and I wish I hadn't shopped at Amazon because it was 
+more expensive and I would have saved $9.99.
+'''
+print(f'{price_fsm.findall(amazon_review) = }')
+
+print(f'{re.sub(price_fsm, '...', amazon_review) = }')
+
+print(f'{re.split(price_fsm, amazon_review) = }')
+
+# coding exercise 07a.1
+
+'[01]{8,16}' # common mistake
+
+#binary_fsm = re.compile('([01]{8})?([01]{8})')
+binary_fsm = re.compile('([01]{16})|([01]{8})')
+print(f'{binary_fsm.match("00001111") = }')
+print(f'{binary_fsm.match("0000111100001111") = }')
+

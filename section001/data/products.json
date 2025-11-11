@@ -1,0 +1,12 @@
+[
+    {
+        "product_id": 1,
+        "name": "RTX 5090",
+        "price": 1999.99
+    },
+    {
+        "product_id": 2,
+        "name": "Ryzen 7",
+        "price": 399.99
+    }
+]
